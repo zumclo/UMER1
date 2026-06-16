@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and condition</title>
+    <link rel="stylesheet" href="../css/polos.css">
+    <link rel="stylesheet" href="../css/extra.css">
+    <link rel="stylesheet" href="../css/whyus.css">
+ <style>
+    .care-policy-section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+        font-family: sans-serif;
+    }
+
+    .care-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .care-main-title {
+        color: #008a45; /* Matching the green title in image_ee625c.png */
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .care-content {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    /* Vertical Timeline Line */
+    .care-content::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #000000;
+    }
+
+    .care-group {
+        margin-bottom: 40px;
+        opacity: 0; /* Base state for animation */
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+    }
+
+    .care-group.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .care-sub-title {
+        color: #000000;
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .care-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .care-list li {
+        color: #444444;
+        font-size: 15px;
+        line-height: 1.8;
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 8px;
+    }
+
+    /* Custom Bullets */
+    .care-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #000000;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+     <%- include('partials/nav') %>
+     <section class="hero-section">
+        <div class="hero-bg-container">
+            <img src="../photos/cut-and-sew.webp" alt="Vito and Will folded polo shirts" class="hero-image">
+        </div>
+
+    </section>
+    <section class="care-policy-section">
+    <div class="care-container">
+        <h2 class="care-main-title">Terms & Conditions</h2>
+        <div class="timeline">
+    
+    <!-- Privacy Statement -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Privacy Statement</h3>
+            <p>At <strong>WuzwearIndustry</strong>, we are committed to protecting your privacy. Only authorized employees within our company may access customer information, and it is used strictly on a need-to-know basis. We regularly review and update our systems to ensure the highest possible level of data security. Please note that we may be legally required to disclose personal information if enforced by law.</p>
+        </div>
+    </div>
+
+    <!-- Designs Non-Disclosure Policy -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Designs Non-Disclosure Policy</h3>
+            <p>We are proud to have you as our customer and to present our work as part of our portfolio. However, we also respect client confidentiality. If you prefer not to have your designs displayed, you can request removal. This option is available to our premium clients, defined as customers who have placed a cumulative order of <strong>$6,000 USD or more</strong> (minimum of <strong>three separate orders</strong>, each at least $2,000 USD).</p>
+        </div>
+    </div>
+
+    <!-- Clothing Marketing Policy -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Clothing Marketing Policy</h3>
+            <p>At WuzwearIndustry, we believe in mutual growth. To support your success, we offer marketing initiatives that promote your brand, helping drive more sales and allowing us to produce more for you in return. With your consent, we may feature your brand name and contact details in promotional activities or refer potential clients directly to you.</p>
+        </div>
+    </div>
+
+    <!-- Confidentiality -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Confidentiality</h3>
+            <p>Client records are treated as confidential and will not be disclosed to third parties, except to our trusted agents, manufacturers, suppliers, or when legally required. Clients may request copies of their records with reasonable notice. We recommend clients retain copies of any documents, contracts, or information shared with them.</p>
+            <p>Any browsing data collected through our website (e.g., tracking trails) is reviewed internally and discarded. Your trust is important to us, and we will not misuse your information.</p>
+        </div>
+    </div>
+
+    <!-- Delivery Charges and Policy -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Delivery Charges and Policy</h3>
+            <p>We use <strong>DHL, FedEx, and Skynet Courier</strong> as our primary shipping carriers, though other courier services may be used depending on the delivery location. DHL and FedEx priority mail usually takes between <strong>four to five days</strong> to arrive, while DHL parcel post can take up to two weeks within the USA and Canada, and two to three weeks for locations such as Hawaii and Alaska.</p>
+            <p>Delivery times are estimates and we do not guarantee specific delivery dates, as responsibility for shipment lies with the courier company once the goods have been dispatched. Tracking details are provided to clients, but we do not take responsibility for delays or lost shipments. In case of a lost shipment, clients may be required to cover production and shipping charges again, unless the courier waives the cost. Shipping arrangements are made as a service to clients, and since we do not own a shipping company, we cannot assume liability for their handling of goods.</p>
+        </div>
+    </div>
+
+    <!-- Delays in Delivery -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Delays in Delivery</h3>
+            <p>It is the client’s responsibility to provide accurate contact information and a correct delivery address. WuzwearIndustry is not responsible for failed deliveries due to incorrect addresses, inaccessible locations, or unavailability of someone to receive and sign for the order. Once goods are dispatched, we are no longer responsible for delays or delivery failures caused by the courier service.</p>
+        </div>
+    </div>
+
+    <!-- Fabric Specification -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Fabric Specification</h3>
+            <p>We offer full customization on fabrics, but for smaller orders we may source ready-made fabric from the market that matches the requested specifications as closely as possible, depending on availability. For unique fabric blends, exact specifications can only be met by custom knitting, which requires a minimum order of <strong>1,000 pieces</strong>. In such cases, we provide a lab test report to confirm the fabric details and accuracy.</p>
+        </div>
+    </div>
+
+    <!-- Delays in Approval for Shipment -->
+    <div class="timeline-item">
+        <div class="timeline-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <div class="timeline-content">
+            <h3>Delays in Approval for Shipment</h3>
+            <p>Once production is complete, WuzwearIndustry can hold finished goods for up to <strong>15 days</strong>. After that, a storage fee of <strong>50 USD per day</strong> will apply. If a client fails to contact us within one month, we will not be responsible for the goods unless storage charges are paid.</p>
+            <p>To ensure accuracy, we always request approval before shipment. If a client does not respond within the given timeframe, we reserve the right to ship the goods without further approval, and we will not be liable for any issues that arise afterward. Orders that remain unapproved for more than <strong>two months</strong> will be canceled without a refund.</p>
+        </div>
+    </div>
+
+</div>
+
+        <!-- <div class="care-content">
+
+            
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Privacy Statement</h3>
+                <div class="care-list">
+                    <p>At <strong>WuzwearIndustry</strong>, we are committed to protecting your privacy. Only authorized employees within our company may access customer information, and it is used strictly on a need-to-know basis. We regularly review and update our systems to ensure the highest possible level of data security. Please note that we may be legally required to disclose personal information if enforced by law.</p>
+                </div>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Designs Non-Disclosure Policy</h3>
+                <div class="care-list">
+                    <p>We are proud to have you as our customer and to present our work as part of our portfolio. However, we also respect client confidentiality. If you prefer not to have your designs displayed, you can request removal. This option is available to our premium clients, defined as customers who have placed a cumulative order of <strong>$6,000 USD or more</strong> (minimum of three separate orders, each at least $2,000 USD).</p>
+                </div>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Clothing Marketing Policy</h3>
+                <div class="care-list">
+                    <p>At WuzwearIndustry, we believe in mutual growth. To support your success, we offer marketing initiatives that promote your brand, helping drive more sales and allowing us to produce more for you in return. With your consent, we may feature your brand name and contact details in promotional activities or refer potential clients directly to you.</p>
+                </div>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Confidentiality</h3>
+                <div class="care-list">
+                    <p>Client records are treated as confidential and will not be disclosed to third parties, except to our trusted agents, manufacturers, suppliers, or when legally required. Clients may request copies of their records with reasonable notice. We recommend clients retain copies of any documents, contracts, or information shared with them.</p>
+                    <p style="margin-top: 10px;">Any browsing data collected through our website (e.g., tracking trails) is reviewed internally and discarded. Your trust is important to us, and we will not misuse your information.</p>
+                </div>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Delivery Charges and Policy</h3>
+                <div class="care-list">
+                    <p>We use <strong>DHL, FedEx, and Skynet Courier</strong> as our primary shipping carriers, though other courier services may be used depending on the delivery location. DHL and FedEx priority mail usually takes between <strong>four to five days</strong> to arrive, while DHL parcel post can take up to two weeks within the USA and Canada, and two to three weeks for locations such as Hawaii and Alaska.</p>
+                    <p style="margin-top: 10px;">Delivery times are estimates and we do not guarantee specific delivery dates, as responsibility for shipment lies with the courier company once the goods have been dispatched. Tracking details are provided to clients, but we do not take responsibility for delays or lost shipments. In case of a lost shipment, clients may be required to cover production and shipping charges again, unless the courier waives the cost. Shipping arrangements are made as a service to clients, and since we do not own a shipping company, we cannot assume liability for their handling of goods.</p>
+                </div>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Delays in Delivery</h3>
+                <div class="care-list">
+                    <p>It is the client’s responsibility to provide accurate contact information and a correct delivery address. WuzwearIndustry is not responsible for failed deliveries due to incorrect addresses, inaccessible locations, or unavailability of someone to receive and sign for the order. Once goods are dispatched, we are no longer responsible for delays or delivery failures caused by the courier service.</p>
+                </div>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Fabric Specification</h3>
+                <div class="care-list">
+                    <p>We offer full customization on fabrics, but for smaller orders we may source ready-made fabric from the market that matches the requested specifications as closely as possible, depending on availability. For unique fabric blends, exact specifications can only be met by custom knitting, which requires a minimum order of <strong>1,000 pieces</strong>. In such cases, we provide a lab test report to confirm the fabric details and accuracy.</p>
+                </div>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Delays in Approval for Shipment</h3>
+                <div class="care-list">
+                    <p>Once production is complete, WuzwearIndustry can hold finished goods for up to <strong>15 days</strong>. After that, a storage fee of <strong>50 USD per day</strong> will apply. If a client fails to contact us within one month, we will not be responsible for the goods unless storage charges are paid.</p>
+                    <p style="margin-top: 10px;">To ensure accuracy, we always request approval before shipment. If a client does not respond within the given timeframe, we reserve the right to ship the goods without further approval, and we will not be liable for any issues that arise afterward. Orders that remain unapproved for more than <strong>two months</strong> will be canceled without a refund.</p>
+                </div>
+            </div>
+            
+        </div> -->
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(el => observer.observe(el));
+    });
+</script>
+</body>
+</html>
+<%- include('partials/footer') %>

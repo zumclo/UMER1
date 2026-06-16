@@ -1,0 +1,292 @@
+/* --- Core Hero Layout Styles --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Fills the window view height entirely */
+    min-height: 500px;
+    max-height: 750px; 
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.hero-bg-container {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* --- Absolute Overlay Alignment Grid --- */
+.hero-overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    pointer-events: none; /* Allows user clicks to register cleanly on structural elements */
+}
+
+/* Re-enables interactions explicitly onto overlay content elements */
+.info-card-tr, 
+.brand-title-center {
+    pointer-events: auto;
+}
+
+/* --- Top Right Details Block --- */
+.info-card-tr {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    max-width: 340px;
+    text-align: right;
+}
+
+.info-card-tr p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.youtube-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #111111;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.youtube-link:hover {
+    color: #009444; /* Clean feedback green hover transition */
+}
+
+/* --- Bottom Center Brand Typography --- */
+.brand-title-center {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.brand-title-center h1 {
+    font-family: 'Playfair Display', serif; /* Classic apparel editorial serif typography */
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.brand-title-center p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+/* --- Mobile / Tablet Fluid Responsiveness --- */
+@media (max-width: 992px) {
+    .brand-title-center h1 {
+        font-size: 2.8rem;
+    }
+    .brand-title-center p {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        max-height: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-bg-container {
+        height: 350px; /* Locks picture ratio perfectly on narrow screens */
+    }
+
+    .hero-overlay-container {
+        position: relative;
+        padding: 40px 20px;
+        background-color: #fafafa; /* Shifts text blocks smoothly beneath layout image */
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-card-tr, 
+    .brand-title-center {
+        position: static;
+        transform: none;
+        max-width: 100%;
+        text-align: center;
+        width: 100%;
+    }
+}
+/* --- Global Section Configuration --- */
+.polo-intro-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #111111;
+    background-color: #ffffff;
+}
+
+/* --- Top Header Styles --- */
+.polo-header {
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto 60px auto;
+}
+
+.polo-header h2 {
+    color: #00a859; /* Brand Green */
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.header-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.header-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Custom keyword styling inline */
+.highlight-text {
+    color: #00a859;
+    font-weight: 500;
+}
+
+/* --- Feature split column container --- */
+.polo-feature-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Left Image Box layout logic */
+.feature-image-wrapper {
+    flex: 1;
+    width: 100%;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Right Content Box layout logic */
+.feature-content-wrapper {
+    flex: 1;
+    width: 100%;
+}
+
+.feature-content-wrapper h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.feature-body-text p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.feature-body-text p:last-child {
+    margin-bottom: 30px;
+}
+
+/* --- Brand Call To Action Button --- */
+.btn-quote {
+  display: inline-block;
+  background-color: #009651; /* Corporate emerald identity green */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-quote:hover {
+  background-color: #007a41;
+}   
+
+.quote-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- Mobile / Tablet Adaptations --- */
+@media (max-width: 992px) {
+    .polo-header h2 {
+        font-size: 1.85rem;
+    }
+    
+    .feature-content-wrapper h3 {
+        font-size: 1.6rem;
+    }
+    
+    .polo-feature-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .polo-intro-section {
+        padding: 40px 15px;
+    }
+
+    .polo-header {
+        margin-bottom: 40px;
+    }
+
+    .polo-feature-grid {
+        flex-direction: column; /* Stacks image cleanly on top of text on mobile screen views */
+        gap: 35px;
+    }
+
+    .feature-content-wrapper {
+        text-align: left;
+    }
+    
+    .quote-btn {
+        width: 100%; /* Spans button text width out safely on narrow devices */
+        text-align: center;
+    }
+}
+
+
+.braber{
+    display: flex; 
+    flex-direction: column;
+    gap: 50px;
+}

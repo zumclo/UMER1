@@ -1,0 +1,94 @@
+/* ==========================================================================
+   🖼️ PORTFOLIO LOOK & FEEL ENGINE
+   ========================================================================== */
+.fab-portfolio-section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.fab-portfolio-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Text Alignments matching image_2bf1d9.png */
+.fab-portfolio-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fab-portfolio-title {
+    color: #009649; /* Distinct Green Accent Color from Logo */
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.fab-portfolio-subtitle {
+    color: #666666;
+    font-size: 11px;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   🕸️ NATIVE 4-COLUMN CSS GRID FRAMEWORK
+   ========================================================================== */
+.fab-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Columns precisely balanced */
+    gap: 25px; /* Clean row and column padding blocks */
+}
+
+/* Individual Image Cards */
+.fab-portfolio-item {
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.fab-portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Retains raw dimensions without distortion */
+    display: block;
+}
+
+/* Subtle Interactive Highlight */
+.fab-portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   📱 MOBILE & TABLET ADAPTABILITY RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 992px) {
+    .fab-portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* Snaps into 2-columns for tablets */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fab-portfolio-grid {
+        grid-template-columns: 1fr; /* Snaps into a single linear view on small devices */
+        gap: 15px;
+    }
+    
+    .fab-portfolio-title {
+        font-size: 20px;
+    }
+    
+    .fab-portfolio-subtitle {
+        font-size: 10px;
+        padding: 0 10px;
+    }
+}

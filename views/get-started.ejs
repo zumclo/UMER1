@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get Started - WuzwearIndustry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/whyus.css">
+</head>
+<body>
+     <%- include('partials/nav') %>
+    <section class="hero-section">
+        <div class="hero-bg-container">
+            <img src="/photos/fabric-processing.webp" alt="Vito and Will folded polo shirts" class="hero-image">
+        </div>
+
+    </section>
+    <div class="container">
+        
+        <header style="text-align: center;     margin-bottom: 60px; ">
+            <h1>How to Get Started</h1>
+            <p>At <strong>WuzwearIndustry</strong>, we keep our ordering system simple and transparent. We believe in building strong, long-term relationships through real human interaction — which is why our dedicated customer support representatives are always available to guide you at every step.</p>
+        </header>
+
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>Order Placement</h3>
+                    <p>To get started, simply email us your designs at sales@wuzwearindustry.com, including all major and minor details that matter to your project. Don't forget to specify your desired order quantity so we can provide an accurate quote.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>Order Summary & Sampling</h3>
+                    <p>If you already have mockups or tech packs, send them to us with your order details. Within 24 hours, one of our experienced customer representatives will respond with a pricing breakdown and next steps.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>Online Manufacturing Tracking</h3>
+                    <p>Once your order is confirmed, you'll never be left in the dark. Our team keeps you updated through regular calls, emails, or virtual meetings. You can check in anytime to track your order's progress.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="timeline-content">
+                    <h3>Pictures & Videos of Samples & Production</h3>
+                    <p>To give you complete peace of mind, we share real-time photos and videos of your samples and ongoing production. You can also explore our sample galleries on our website and official YouTube channel.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="form-section">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your message (optional)</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="file">Choose a file</label>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="file" name="file">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+
+            </form>
+        </section>
+
+    </div>
+
+    <script src="../js/get-started.js"></script>
+</body>
+</html>
+<%- include('partials/footer') %>

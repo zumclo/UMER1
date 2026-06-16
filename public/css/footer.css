@@ -1,0 +1,308 @@
+/* ==========================================================================
+   🧱 GLOBAL BASE VARIABLES & WRAPPERS
+   ========================================================================== */
+.fab-footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.fab-footer-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   ⚡ TOP FOUR COLUMN BALANCING ENGINE
+   ========================================================================== */
+.fab-footer-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+/* Logo Representation Vector Rules */
+.fab-f-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.fab-f-logo-icon {
+    position: relative;
+    width: 26px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+.fab-f-logo-icon::before, 
+.fab-f-logo-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: #009649;
+}
+
+.fab-f-logo-icon::before {
+    top: 0;
+    width: 100%;
+    height: 11px;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+.fab-f-logo-icon::after {
+    top: 14px;
+    width: 85%;
+    height: 9px;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.fab-f-logo-stem {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 11px;
+    background-color: #009649;
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+}
+
+.fab-f-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.fab-f-logo-title {
+    color: #009649;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.fab-f-logo-subtitle {
+    color: #555555;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-top: 3px;
+}
+
+/* Content Links & Typography styling */
+.fab-contact-info {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.fab-call-tag {
+    color: #888888;
+    margin-bottom: 4px;
+}
+
+.fab-phone-link {
+    display: block;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.fab-contact-info p {
+    margin: 6px 0;
+}
+
+.fab-contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.fab-underline-link {
+    display: inline-block;
+    color: #ffffff !important;
+    text-decoration: underline !important;
+    margin-top: 10px;
+}
+
+/* Column Headings with Decorative Underline Graphic Accent */
+.fab-footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0 0 20px 0;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.fab-footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #009649;
+}
+
+.fab-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fab-footer-links li {
+    margin-bottom: 12px;
+}
+
+.fab-footer-links a {
+    color: #cccccc;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.fab-footer-links a:hover {
+    color: #009649;
+    padding-left: 4px;
+}
+
+/* ==========================================================================
+   💳 MIDDLE PLATFORM GATEWAY STRIP
+   ========================================================================== */
+.fab-footer-payments {
+    border-top: 1px solid #1a1a1a;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fab-payments-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+.fab-payment-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Round Badge Layout Engine matching image_c24d63.png */
+.fab-pay-circle {
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 6px;
+}
+
+/* Specific background adjustment for HBL icon block */
+.fab-pay-circle.fab-bg-green {
+    background-color: #005b41; 
+    padding: 0;
+}
+
+.fab-pay-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   🔒 BOTTOM COPYRIGHT & SOCIAL HOVER TRIGGERS
+   ========================================================================== */
+.fab-footer-bottom {
+    border-top: 1px solid #1a1a1a;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fab-copyright {
+    font-size: 13px;
+    color: #888888;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 75%;
+}
+
+.fab-social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fab-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.fab-social-links a svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Interactive Feedback Animations */
+.fab-social-links a:hover {
+    background-color: #009649;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   📱 RESPONSIVE BREAKPOINT DRAWERS (TABLETS & PHONES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .fab-footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fab-footer {
+        padding: 40px 0 20px 0;
+    }
+    
+    .fab-footer-top {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .fab-footer-payments, 
+    .fab-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .fab-copyright {
+        max-width: 100%;
+    }
+}

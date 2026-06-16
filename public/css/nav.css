@@ -1,0 +1,405 @@
+/* ==========================================================================
+   📦 GLOBAL VARIABLES & LAYOUT BASICS
+   ========================================================================== */
+.fab-main-header {
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1000;
+}
+
+.fab-nav-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.fab-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.fab-logo-box {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.fab-logo-icon {
+    position: relative;
+    width: 32px;
+    height: 48px;
+    margin-right: 12px;
+}
+
+.fab-logo-icon::before, 
+.fab-logo-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: #009649;
+}
+
+.fab-logo-icon::before {
+    top: 0;
+    width: 100%;
+    height: 14px;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+.fab-logo-icon::after {
+    top: 18px;
+    width: 85%;
+    height: 12px;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.fab-logo-stem {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 14px;
+    background-color: #009649;
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+}
+
+.fab-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.fab-logo-title {
+    color: #009649;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1;
+}
+
+.fab-logo-subtitle {
+    color: #a5b1a9;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+.fab-top-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.fab-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555555;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.fab-contact-item:hover {
+    color: #009649;
+}
+
+.fab-contact-item svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #009649;
+    stroke-width: 2;
+}
+
+.fab-cta-btn {
+    background-color: #009649;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.fab-cta-btn:hover {
+    background-color: #007d3c;
+}
+
+.fab-main-navbar {
+    background-color: #009649;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.fab-menu-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fab-menu-item {
+    position: relative;
+}
+
+.fab-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 18px 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s;
+}
+
+.fab-menu-link:hover {
+    background-color: #007d3c;
+}
+
+.fab-menu-link svg {
+    width: 10px;
+    height: 10px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.5;
+    transition: transform 0.2s ease;
+}
+
+.fab-mobile-toggle, .fab-mobile-only-item {
+    display: none;
+}
+
+/* ==========================================================================
+   ⚡ DESKTOP MEGA DROPDOWNS ENGINE (HOVER)
+   ========================================================================== */
+@media (min-width: 993px) {
+    .fab-has-dropdown {
+        position: static; 
+    }
+
+    .fab-mega-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #f1f1f1;
+        padding: 40px 0;
+        z-index: 999;
+    }
+
+    .fab-has-dropdown:hover .fab-mega-dropdown {
+        display: block;
+    }
+
+    .fab-dropdown-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 1.5fr; 
+        gap: 25px;
+    }
+
+    .fab-why-us-dropdown {
+        left: auto;
+        width: auto;
+        min-width: 280px;
+    }
+
+    .fab-why-us-dropdown .fab-dropdown-container {
+        grid-template-columns: 1fr;
+        padding: 0 25px;
+    }
+
+    .customization-container {
+        grid-template-columns: 1fr 1fr 2fr; 
+    }
+
+    .fab-dropdown-col {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fab-dropdown-col a {
+        color: #111111;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    .fab-dropdown-col a:hover {
+        color: #009649;
+    }
+
+    .fab-graphics-col {
+        border-left: 1px solid #eeeeee;
+        padding-left: 35px;
+        justify-content: center;
+    }
+
+    .fab-image-gallery-grid {
+        display: grid;
+        gap: 16px;
+    }
+
+    .products-grid-size { grid-template-columns: repeat(3, 1fr); }
+    .customization-grid-size { grid-template-columns: repeat(4, 1fr); }
+
+    .fab-image-gallery-grid img {
+        width: 100%;
+        max-width: 65px;
+        height: auto;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+        opacity: 0.85;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        margin: 0 auto;
+    }
+
+    .fab-image-gallery-grid img:hover {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+   📱 MOBILE INTERFACE REPAIRS (TABLETS & PHONES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .fab-top-right {
+        display: none;
+    }
+
+    /* Fixed Tap Target layer styling rules */
+    .fab-mobile-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        z-index: 1001; /* Keeps button surface floating strictly above dropdown canvas layer lines */
+    }
+
+    .fab-hamburger-bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #009649;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, background-color 0.3s ease;
+        border-radius: 2px;
+    }
+
+    /* Fixed Cross Transform Matrix alignment rules */
+    .fab-mobile-toggle.is-active .fab-hamburger-bar:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+        background-color: #111111;
+    }
+    .fab-mobile-toggle.is-active .fab-hamburger-bar:nth-child(2) {
+        opacity: 0;
+    }
+    .fab-mobile-toggle.is-active .fab-hamburger-bar:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+        background-color: #111111;
+    }
+
+    .fab-main-navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #009649;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        border-radius: 0;
+        z-index: 1000;
+    }
+
+    /* Injected active viewport view hook */
+    .fab-main-navbar.is-open {
+        display: block;
+    }
+
+    .fab-menu-list {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0;
+    }
+
+    .fab-menu-link {
+        padding: 16px 24px;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        justify-content: space-between;
+    }
+
+    .fab-menu-link.arrow-rotated svg {
+        transform: rotate(180deg);
+    }
+
+    /* Toggled items hidden state default setting */
+    .fab-mega-dropdown {
+        display: none; 
+        background-color: #007d3c;
+        padding: 5px 24px 15px 24px;
+    }
+
+    /* Custom tracking toggle visibility setting rule */
+    .fab-mega-dropdown.is-open {
+        display: block; 
+    }
+
+    .fab-dropdown-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .fab-dropdown-col a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 0;
+        font-size: 13.5px;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .fab-dropdown-col a:last-child {
+        border-bottom: none;
+    }
+    
+    .fab-graphics-col {
+        display: none; 
+    }
+
+    .fab-mobile-only-item {
+        display: block;
+    }
+
+    .class-mobile-cta {
+        background-color: #005629 !important;
+        font-weight: bold;
+    }
+}

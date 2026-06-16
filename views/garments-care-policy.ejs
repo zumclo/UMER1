@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garment Care Policy</title>
+    <link rel="stylesheet" href="../css/polos.css">
+    <link rel="stylesheet" href="../css/extra.css">
+    <style>
+    .care-policy-section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+        font-family: sans-serif;
+    }
+
+    .care-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .care-main-title {
+        color: #008a45; /* Matching the green title in image_ee625c.png */
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .care-content {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    /* Vertical Timeline Line */
+    .care-content::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #000000;
+    }
+
+    .care-group {
+        margin-bottom: 40px;
+        opacity: 0; /* Base state for animation */
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+    }
+
+    .care-group.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .care-sub-title {
+        color: #000000;
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .care-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .care-list li {
+        color: #444444;
+        font-size: 15px;
+        line-height: 1.8;
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 8px;
+    }
+
+    /* Custom Bullets */
+    .care-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #000000;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+ <%- include('partials/nav') %>
+    <section class="hero-section">
+        <div class="hero-bg-container">
+            <img src="../photos/hoodies.webp" alt="Vito and Will folded polo shirts" class="hero-image">
+        </div>
+
+    </section>
+<section class="care-policy-section">
+    <div class="care-container">
+        <h2 class="care-main-title">All you Need to Know About Garments Care Policy</h2>
+
+        <div class="care-content">
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Washing Instructions</h3>
+                <ul class="care-list">
+                    <li>Wash garments inside-out with cold water cycle for longer durability.</li>
+                    <li>Avoid bleach or harsh fabric softeners to maintain quality.</li>
+                    <li>Flat drying or tumble dry with low heat prevents shrinkage.</li>
+                    <li>Do not iron directly on printed or designed areas.</li>
+                    <li>Strictly avoid dry cleaning to protect fabrics and prints.</li>
+                </ul>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Embroidered Apparel</h3>
+                <ul class="care-list">
+                    <li>Follow the care label instructions carefully for best preservation.</li>
+                    <li>Wash inside-out on cold water cycle to maintain embroidery threads.</li>
+                    <li>Avoid chlorine bleach, as it can cause discoloration of stitching.</li>
+                    <li>Do not use fabric softeners, they damage embroidery durability.</li>
+                    <li>Tumble dry on low heat or flat dry to prevent shrinkage.</li>
+                    <li>Never iron directly on embroidered areas; iron inside-out only.</li>
+                    <li>Dry cleaning is not recommended for embroidered items.</li>
+                </ul>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Heat-Pressed Vinyl</h3>
+                <ul class="care-list">
+                    <li>Treat vinyl prints the same way as screen printing for washing.</li>
+                    <li>Do not use fabric softeners, as they weaken adhesive strength.</li>
+                    <li>Wash inside-out with cold water to protect vinyl surface.</li>
+                    <li>Tumble dry low or hang dry to avoid peeling of vinyl layers.</li>
+                </ul>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">Fabric Softeners</h3>
+                <ul class="care-list">
+                    <li>Fabric softeners reduce cling and add softness, but avoid using them on:</li>
+                    <li><strong>Screen Printed Shirts:</strong> They break down ink and fade the print.</li>
+                    <li><strong>Vinyl Printed Shirts:</strong> Adhesive weakens, causing peeling.</li>
+                    <li><strong>Polyester or Moisture-Wicking Fabrics:</strong> Leaves residue that reduces fabric performance.</li>
+                </ul>
+            </div>
+
+            <div class="care-group animate-on-scroll">
+                <h3 class="care-sub-title">General Apparel Care</h3>
+                <ul class="care-list">
+                    <li>Fabuluxe apparel is prewashed and preshrunk; avoid unnecessary shrink washing.</li>
+                    <li>Excessive washing can fade both fabric and print quality.</li>
+                    <li>Cotton-polyester blends shrink less, depending on polyester ratio.</li>
+                    <li>Avoid dry cleaning as it can cause pilling from friction.</li>
+                    <li>Pill-resistant yarn is used, but no fabric is 100% pill-free. Proper care extends garment life.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<%- include('partials/popup') %>
+<%- include('partials/footer') %>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(el => observer.observe(el));
+    });
+    
+</script>
+</body>
+
+</html>

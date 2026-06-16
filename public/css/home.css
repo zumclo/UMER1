@@ -1,0 +1,969 @@
+/* Reset & Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Hero Wrapper */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  padding-left: 8%;  /* Left alignment spacing */
+  background-color: #000000;
+}
+
+/* Slides Engine */
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth fading transition */
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Subtle dark overlay so white text remains legible regardless of background graphic */
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); 
+  z-index: 2;
+}
+
+/* Typography & Content Layer */
+.hero-content {
+  position: relative;
+  z-index: 3; /* Places text cleanly above backgrounds */
+  max-width: 650px;
+  color: #000000; /* Defaulting to dark color as seen in screenshot */
+}
+
+/* If your slide graphics are dark, change text colors to #ffffff instead */
+.hero-subtitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.hero-title {
+  font-size: 7.5rem;
+  font-weight: 800;
+  line-height: 0.95;
+  margin: 10px 0;
+  letter-spacing: -2px;
+}
+
+.hero-caption {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.hero-caption .highlight {
+  color: #009651; /* Matching signature brand green */
+}
+
+/* Navigation Dots Styles */
+.slider-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 4;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #009651;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot:hover {
+  transform: scale(1.15);
+}
+
+.dot.active {
+  background-color: #009651;
+}
+
+/* Responsive Scaling for Tablets and Mobile Devices */
+@media (max-width: 992px) {
+  .hero-slider {
+    padding-left: 5%;
+  }
+  .hero-subtitle { font-size: 1.6rem; }
+  .hero-title { font-size: 5rem; }
+  .hero-caption { font-size: 1.4rem; }
+}
+
+@media (max-width: 576px) {
+  .hero-slider {
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-title { font-size: 3.8rem; }
+  .hero-subtitle { font-size: 1.3rem; }
+  .hero-caption { font-size: 1.1rem; }
+  .slider-dots { bottom: 25px; }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/* Two-column layout container */
+.apparel-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* 50/50 block sizing logic */
+.apparel-image,
+.apparel-content {
+  flex: 1;
+  width: 50%;
+}
+
+/* Fluid responsive image formatting */
+.apparel-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Content block styles */
+.apparel-title {
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+}
+
+.apparel-text {
+  font-size: 0.95rem;
+  color: #111111;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+/* Button CTA formatting */
+.btn-quote {
+  display: inline-block;
+  background-color: #009651; /* Corporate emerald identity green */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-quote:hover {
+  background-color: #007a41;
+}
+
+/* Responsive breakpoint for small devices and tablets */
+@media (max-width: 992px) {
+  .container {
+    padding: 50px 20px;
+  }
+  
+  .apparel-row {
+    flex-direction: column; /* Collapses columns into vertical stacks */
+    gap: 35px;
+  }
+
+  .apparel-image,
+  .apparel-content {
+    width: 100%;
+  }
+
+  .apparel-title {
+    font-size: 1.6rem;
+  }
+}
+.services-grid-section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px; /* Spacious width for proper 3-column balancing */
+}
+
+/* Three-column card layout grid */
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Space between the cards */
+}
+
+/* Individual card module box styles */
+.service-card {
+  flex: 1;
+  min-height: 540px; /* Forces uniform height */
+  border-radius: 16px; /* Smooth rounded corners matching the screenshot */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Pushes content wrapper to the bottom */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft visual drop-shadow */
+}
+
+/* Inner content alignment layer */
+.card-content {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Keeps the text left-aligned */
+}
+
+/* Typography elements styling */
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+
+.card-text {
+  font-size: 0.92rem;
+  color: #f0f0f0; /* Soft off-white to maintain crisp contrast and hierarchy */
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* CTA "Read More" button styling */
+.btn-read-more {
+  display: inline-block;
+  background-color: #009651; /* Matching corporate green shade */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 4px;
+  align-self: center; /* Horizontally centers the button itself */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-read-more:hover {
+  background-color: #007a41;
+  transform: translateY(-1px);
+}
+
+/* Responsive responsive adjustments for smaller screen displays */
+@media (max-width: 992px) {
+  .services-grid {
+    flex-direction: column; /* Stack cards vertically on smaller tablets/mobiles */
+    gap: 40px;
+  }
+  
+  .service-card {
+    min-height: auto; /* Allow dynamic heights for stacked design */
+  }
+  
+  .card-content {
+    padding: 50px 30px 40px 30px;
+  }
+}
+/* this is new section */
+.brand-showcase-section {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Row wrapper - structural layout setup */
+.showcase-row {
+  display: flex;
+  width: 100%;
+  align-items: stretch; /* Elements share equal computed heights */
+}
+
+/* Inverts visual arrangement for rows matching `.row-reverse` */
+.showcase-row.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Split content evenly 50/50 */
+.showcase-media,
+.showcase-content {
+  flex: 1;
+  width: 50%;
+}
+
+/* Image settings */
+.showcase-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Content block text card container */
+.showcase-content.green-poly-bg {
+  /* Replace geometric-bg.jpg with your brand low-poly texture block */
+  background-color: #162e20;
+  background-image: linear-gradient(rgba(22, 46, 32, 0.88), rgba(14, 31, 21, 0.96)), url('../photos/geometric-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+}
+
+.inner-text {
+  width: 100%;
+  max-width: 620px;
+  color: #ffffff;
+}
+
+/* Typography styles */
+.block-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 22px;
+  letter-spacing: -0.3px;
+}
+
+.block-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  font-weight: 300;
+  color: #d1ded6; /* Soft high-contrast tone for reading */
+}
+
+.block-desc:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Scroll Animation Setup States --- */
+.anim-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.anim-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.anim-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active trigger class pushed by JavaScript */
+.reveal-active {
+  opacity: 1 !important;
+  transform: translate(0) !important;
+}
+
+/* --- Mobile Viewports Layout Control --- */
+@media (max-width: 992px) {
+  .showcase-row,
+  .showcase-row.row-reverse {
+    flex-direction: column; /* Stack layout sections vertically */
+  }
+
+  .showcase-media,
+  .showcase-content {
+    width: 100%;
+    flex: none;
+  }
+
+  .showcase-media {
+    height: 380px; /* Uniform height for imagery when cards stack */
+  }
+
+  .showcase-content.green-poly-bg {
+    padding: 50px 30px;
+  }
+
+  .block-title {
+    font-size: 1.6rem;
+  }
+
+  /* Adjust mobile viewports animations to slide straight up instead of horizontally */
+  .anim-left, 
+  .anim-right {
+    transform: translateY(50px);
+  }
+}
+/* faqs */
+/* Two-Column Wrapper Section */
+.faq-split-section {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-split-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start; /* Aligns boxes cleanly at top edge */
+  gap: 50px; /* Separates text content column from graphic box */
+}
+
+/* Column Proportion Weights */
+.faq-left-col {
+  flex: 1.2; /* Allows accordion engine to expand comfortably */
+}
+
+.faq-right-col {
+  flex: 0.8;
+  align-self: stretch; /* Forces image container box to share matching height */
+}
+
+.faq-right-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fluid scaling logic protecting proportions */
+  display: block;
+}
+
+/* Typography styles */
+.faq-main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+/* Accordion Outer Border Frame */
+.faq-accordion {
+  border: 1px solid #e2e8f0;
+  border-radius: 2px;
+}
+
+/* Individual Accordion Block */
+.faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* Interactive Trigger Elements */
+.faq-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  list-style: none; /* Strip standard native webkit arrows */
+  user-select: none;
+}
+
+.faq-trigger::-webkit-details-marker {
+  display: none; /* Safari marker fallback override */
+}
+
+/* Premium CSS Arrow Indicator Shapes */
+.faq-icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  flex-shrink: 0; /* Guard shapes against shrinking layout distortion */
+  margin-left: 15px;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  width: 8px;
+  height: 2px;
+  background-color: #009651; /* Emerald corporate green code accent */
+  transition: transform 0.25s ease-in-out;
+}
+
+/* Build downward facing chevron marker angle shapes (\ /) */
+.faq-icon::before {
+  left: -2px;
+  transform: rotate(45deg);
+}
+.faq-icon::after {
+  right: -2px;
+  transform: rotate(-45deg);
+}
+
+/* Flip marker angle vectors straight up when parent tags toggle open (/ \) */
+.faq-item[open] .faq-icon::before {
+  transform: rotate(-45deg);
+}
+.faq-item[open] .faq-icon::after {
+  transform: rotate(45deg);
+}
+
+/* Content Box Interior Panel formatting */
+.faq-content {
+  padding: 0 28px 24px 28px;
+}
+
+.faq-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4a5568; /* Readable corporate slate tint text color */
+  line-height: 1.65;
+}
+
+/* Mobile responsive breakpoints scaling layouts */
+@media (max-width: 992px) {
+  .faq-split-container {
+    flex-direction: column; /* Collapses split cells into standard vertical stack orientation */
+    gap: 40px;
+  }
+  
+  .faq-left-col,
+  .faq-right-col {
+    width: 100%;
+  }
+
+  .faq-right-col {
+    height: 450px; /* Provides fixed window aspect box height constraints for image on mobile layers */
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-main-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  
+  .faq-trigger {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .faq-content {
+    padding: 0 20px 20px 20px;
+  }
+  
+  .faq-right-col {
+    height: 320px;
+  }
+}
+/* delivery section */
+/* Outer Master Wrapper Section */
+.delivery-methods-section {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.delivery-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Heading section title layout */
+.delivery-main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -0.5px;
+}
+
+/* Master Split Side-by-Side Flex Layout Engine */
+.delivery-split-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* 50/50 Balance split block rules */
+.logistics-cards-grid,
+.logistics-illustration-box {
+  flex: 1;
+  width: 50%;
+}
+
+/* --- Left Column: Logistics Brand Grid layout --- */
+.logistics-cards-grid {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* Universal logistics card module layout rules */
+.logistics-card {
+  flex: 1;
+  max-width: 175px;
+  background: #f7f7f7;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Body Area for Logos and primary speeds */
+.card-body {
+  padding: 30px 15px 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.brand-logo-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.transit-time-primary {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Bottom status panel badges configuration */
+.transit-badge {
+  padding: 12px 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* --- Contextual Border Glow & Badge Color Swatches --- */
+/* UPS Card Theme styling profiles */
+.card-ups {
+  border: 2px solid #351c15; /* Brown variant matching snapshot */
+}
+.badge-ups {
+  background-color: #351c15;
+}
+
+/* FedEx Card Theme styling profiles */
+.card-fedex {
+  border: 2px solid #f26522; /* FedEx Signature Orange */
+}
+.badge-fedex {
+  background-color: #f26522;
+}
+
+/* DHL Card Theme styling profiles */
+.card-dhl {
+  border: 2px solid #ffcc00; /* DHL Signature Yellow */
+}
+.badge-dhl {
+  background-color: #ffcc00;
+  color: #000000; /* Dark typography over yellow backgrounds for perfect contrast layout */
+}
+
+/* --- Right Column: Illustration Visual graphic layer styling rules --- */
+.logistics-illustration-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* --- Mobile Breakpoints Responsive Layout control --- */
+@media (max-width: 992px) {
+  .delivery-main-title {
+    margin-bottom: 40px;
+  }
+  
+  .delivery-split-layout {
+    flex-direction: column; /* Stack logistics cards above illustration grid elements on tablet viewports */
+    gap: 50px;
+  }
+
+  .logistics-cards-grid,
+  .logistics-illustration-box {
+    width: 100%;
+  }
+
+  .logistics-cards-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .delivery-main-title {
+    font-size: 1.8rem;
+  }
+
+  .logistics-cards-grid {
+    flex-direction: column; /* Stack columns individually vertically on narrow mobile display sizes */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logistics-card {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+/* last section */
+/* Container Wrapper Sizing Layouts */
+/* Container Wrapper Sizing Layouts */
+.testimonials-carousel-section {
+  width: 100%;
+  padding: 80px 20px 60px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Text Profile Elements */
+.testimonials-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -0.5px;
+}
+
+/* Carousel Outer Viewport Framing Window */
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Flex Animation Slide Rail Track */
+.carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Slide Shell Layout Elements */
+.testimonial-slide-item {
+  flex: 0 0 100%; /* Keeps every individual slide sized exactly to the viewport width */
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Card Module Component Wrapper Box */
+.testimonial-card-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Circular Profile Avatar Image Frame */
+.avatar-holder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Interior Typography Components Hierarchy */
+.content-holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.star-rating-row {
+  color: #f1c40f;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.review-quote-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 18px;
+}
+
+.reviewer-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #000000;
+  margin-bottom: 2px;
+  letter-spacing: 0.3px;
+}
+
+.reviewer-location {
+  font-size: 0.85rem;
+  color: #999999;
+}
+
+/* Navigation Click Dots (Persists across desktop and mobile screens) */
+.carousel-dots-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.navigation-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.navigation-dot.active {
+  background-color: #333333;
+}
+
+/* Global Flags Grid Strip Footer */
+.global-flags-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.flag-item-box {
+  flex: 1;
+  max-width: 75px;
+  display: flex;
+  justify-content: center;
+}
+
+.flag-item-box img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Responsive Layout Configurations Breakpoints --- */
+@media (max-width: 991px) {
+  .testimonials-title {
+    font-size: 1.85rem;
+    margin-bottom: 40px;
+  }
+
+  .global-flags-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 40px;
+  }
+
+  .flag-item-box {
+    flex: 0 0 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-card-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .flag-item-box {
+    flex: 0 0 35%;
+  }
+}

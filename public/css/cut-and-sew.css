@@ -1,0 +1,408 @@
+/* Base styles & reset for demonstration purposes */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Section styling */
+.manufacturing-services {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 850px; /* Restricts width to match the dense paragraph layout */
+  margin: 0 auto;
+}
+
+/* Heading styling */
+.section-title {
+  color: #009651; /* Premium green shade */
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+/* Paragraph styling */
+.section-text {
+  font-size: 0.95rem;
+  color: #111111;
+  margin-bottom: 24px;
+  font-weight: 400;
+  /* Helps achieve the balanced text-wrapping seen in the image */
+  text-wrap: balance; 
+}
+
+/* Target the last paragraph to remove extra bottom margin */
+.section-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Strong text emphasis match */
+.section-text strong {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .section-text {
+    font-size: 0.9rem;
+  }
+}
+/* Base resets and fonts */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Row Layout */
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 100px; /* Space between the two blocks */
+}
+
+/* Remove bottom margin on the final row */
+.service-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Reverses layout for the second block */
+.service-row.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Column sizing */
+.service-image, 
+.service-content {
+  flex: 1;
+  width: 50%;
+}
+
+/* Image handling */
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Typography styles */
+.service-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.service-text {
+  font-size: 0.95rem;
+  color: #222222;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.service-text strong {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Button styling */
+.btn-quote {
+  display: inline-block;
+  background-color: #009651; /* Matching original green button */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-quote:hover {
+  background-color: #007a41;
+}
+
+/* Responsive design for tablets and mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
+  
+  .service-row,
+  .service-row.row-reverse {
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .service-image, 
+  .service-content {
+    width: 100%;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+  }
+}
+/* Base Resets & Typography */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.faq-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 900px; /* Restricts width to match the screenshot layout */
+}
+
+.faq-main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* Accordion Container Wrapper */
+.faq-accordion {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+}
+
+/* Individual Accordion Item Box */
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+/* Remove the bottom border on the very last item */
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* Interactive Header/Trigger */
+.faq-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  list-style: none; /* Hides default browser arrow marker */
+  user-select: none;
+}
+
+/* Fallback to hide default arrow in Safari */
+.faq-trigger::-webkit-details-marker {
+  display: none;
+}
+
+/* Clean CSS Chevron Arrow */
+.faq-icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  width: 8px;
+  height: 2px;
+  background-color: #009651; /* Premium green indicator */
+  transition: transform 0.25s ease;
+}
+
+/* Constructing the down chevron shape (\ /) */
+.faq-icon::before {
+  left: -2px;
+  transform: rotate(45deg);
+}
+.faq-icon::after {
+  right: -2px;
+  transform: rotate(-45deg);
+}
+
+/* Interactive States: When open, turn the chevron up (/ \) */
+.faq-item[open] .faq-icon::before {
+  transform: rotate(-45deg);
+}
+.faq-item[open] .faq-icon::after {
+  transform: rotate(45deg);
+}
+
+/* Content Box Wrapper */
+.faq-content {
+  padding: 0 30px 24px 30px;
+}
+
+.faq-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444444;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .faq-main-title {
+    font-size: 1.6rem;
+  }
+  .faq-trigger {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+  }
+  .faq-content {
+    padding: 0 20px 18px 20px;
+  }
+}
+/* css for second section of dyeing process page */
+/* Base resets and structural fonts */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Flexible Layout Row */
+.dye-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 100px; /* Separation between content rows */
+}
+
+/* Remove bottom margin on final block */
+.dye-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Visual layout flip for the alternating rows */
+.dye-row.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Direct 50/50 split scaling */
+.dye-image, 
+.dye-content {
+  flex: 1;
+  width: 50%;
+}
+
+/* Responsive Image Container wrapper */
+.dye-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Typography settings */
+.dye-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.dye-text {
+  font-size: 0.95rem;
+  color: #222222;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+/* CTA Green Button Formatting */
+.btn-quote {
+  display: inline-block;
+  background-color: #009651; /* Premium signature green */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-quote:hover {
+  background-color: #007a41;
+}
+
+/* Responsive design styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
+  
+  .dye-row,
+  .dye-row.row-reverse {
+    flex-direction: column; /* Collapses rows vertically on tablets/mobiles */
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .dye-image, 
+  .dye-content {
+    width: 100%;
+  }
+
+  .dye-title {
+    font-size: 1.5rem;
+  }
+}
