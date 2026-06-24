@@ -45,7 +45,7 @@
     content: '';
     position: absolute;
     left: 0;
-    background-color: #009649;
+    background-color: #810B38;
 }
 
 .fab-f-logo-icon::before {
@@ -68,7 +68,7 @@
     left: 0;
     width: 10px;
     height: 11px;
-    background-color: #009649;
+    background-color: #810B38;
     clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
 }
 
@@ -78,7 +78,7 @@
 }
 
 .fab-f-logo-title {
-    color: #009649;
+    color: #810B38;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -147,7 +147,7 @@
     left: 0;
     width: 35px;
     height: 2px;
-    background-color: #009649;
+    background-color: #810B38;
 }
 
 .fab-footer-links {
@@ -168,7 +168,7 @@
 }
 
 .fab-footer-links a:hover {
-    color: #009649;
+    color: #810B38;
     padding-left: 4px;
 }
 
@@ -214,7 +214,7 @@
 
 /* Specific background adjustment for HBL icon block */
 .fab-pay-circle.fab-bg-green {
-    background-color: #005b41; 
+    background-color: #020263; 
     padding: 0;
 }
 
@@ -271,7 +271,7 @@
 
 /* Interactive Feedback Animations */
 .fab-social-links a:hover {
-    background-color: #009649;
+    background-color: #810B38b5;
     color: #ffffff;
     transform: translateY(-3px);
 }

@@ -91,7 +91,7 @@ body {
 }
 
 .hero-caption .highlight {
-  color: #009651; /* Matching signature brand green */
+  color: #810B38; /* Matching signature brand green */
 }
 
 /* Navigation Dots Styles */
@@ -109,7 +109,7 @@ body {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 2px solid #009651;
+  border: 2px solid #810B38;
   background-color: transparent;
   cursor: pointer;
   padding: 0;
@@ -122,7 +122,7 @@ body {
 }
 
 .dot.active {
-  background-color: #009651;
+  background-color: #810B38;
 }
 
 /* Responsive Scaling for Tablets and Mobile Devices */
@@ -197,7 +197,7 @@ body {
 /* Button CTA formatting */
 .btn-quote {
   display: inline-block;
-  background-color: #009651; /* Corporate emerald identity green */
+  background-color: #810B38; /* Corporate emerald identity green */
   color: #ffffff;
   text-decoration: none;
   font-size: 0.85rem;
@@ -208,7 +208,7 @@ body {
 }
 
 .btn-quote:hover {
-  background-color: #007a41;
+  background-color: #810B38b5;
 }
 
 /* Responsive breakpoint for small devices and tablets */
@@ -290,7 +290,7 @@ body {
 /* CTA "Read More" button styling */
 .btn-read-more {
   display: inline-block;
-  background-color: #009651; /* Matching corporate green shade */
+  background-color: #810B38; /* Matching corporate green shade */
   color: #ffffff;
   text-decoration: none;
   font-size: 0.85rem;
@@ -302,7 +302,7 @@ body {
 }
 
 .btn-read-more:hover {
-  background-color: #007a41;
+  background-color: #810B38b5;
   transform: translateY(-1px);
 }
 
@@ -544,7 +544,7 @@ body {
   top: 5px;
   width: 8px;
   height: 2px;
-  background-color: #009651; /* Emerald corporate green code accent */
+  background-color: #810B38; /* Emerald corporate green code accent */
   transition: transform 0.25s ease-in-out;
 }
 

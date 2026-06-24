@@ -39,7 +39,7 @@
     content: '';
     position: absolute;
     left: 0;
-    background-color: #009649;
+    background-color: #810B38;
 }
 
 .fab-logo-icon::before {
@@ -62,7 +62,7 @@
     left: 0;
     width: 12px;
     height: 14px;
-    background-color: #009649;
+    background-color: #810B38;
     clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
 }
 
@@ -72,7 +72,7 @@
 }
 
 .fab-logo-title {
-    color: #009649;
+    color: #810B38;
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -105,19 +105,19 @@
 }
 
 .fab-contact-item:hover {
-    color: #009649;
+    color: #810B38;
 }
 
 .fab-contact-item svg {
     width: 18px;
     height: 18px;
     fill: none;
-    stroke: #009649;
+    stroke: #810B38;
     stroke-width: 2;
 }
 
 .fab-cta-btn {
-    background-color: #009649;
+    background-color: #810B38;
     color: #ffffff;
     padding: 12px 24px;
     border-radius: 4px;
@@ -128,11 +128,11 @@
 }
 
 .fab-cta-btn:hover {
-    background-color: #007d3c;
+    background-color: #810B38b5;
 }
 
 .fab-main-navbar {
-    background-color: #009649;
+    background-color: #810B38;
     border-radius: 2px;
     display: flex;
     justify-content: center;
@@ -164,7 +164,7 @@
 }
 
 .fab-menu-link:hover {
-    background-color: #007d3c;
+    background-color: #810B38b5;
 }
 
 .fab-menu-link svg {
@@ -245,7 +245,7 @@
     }
 
     .fab-dropdown-col a:hover {
-        color: #009649;
+        color: #810B38;
     }
 
     .fab-graphics-col {
@@ -306,7 +306,7 @@
         display: block;
         width: 100%;
         height: 3px;
-        background-color: #009649;
+        background-color: #810B38;
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, background-color 0.3s ease;
         border-radius: 2px;
     }
@@ -330,7 +330,7 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #009649;
+        background-color: #810B38;
         box-shadow: 0 8px 16px rgba(0,0,0,0.15);
         border-radius: 0;
         z-index: 1000;
@@ -361,7 +361,7 @@
     /* Toggled items hidden state default setting */
     .fab-mega-dropdown {
         display: none; 
-        background-color: #007d3c;
+        background-color: #810B38;
         padding: 5px 24px 15px 24px;
     }
 
@@ -399,7 +399,7 @@
     }
 
     .class-mobile-cta {
-        background-color: #005629 !important;
+        background-color: #810B38b5 !important;
         font-weight: bold;
     }
 }

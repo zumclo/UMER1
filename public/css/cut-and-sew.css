@@ -24,7 +24,7 @@ body {
 
 /* Heading styling */
 .section-title {
-  color: #009651; /* Premium green shade */
+  color: #810B38; /* Premium green shade */
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 30px;
@@ -136,7 +136,7 @@ body {
 /* Button styling */
 .btn-quote {
   display: inline-block;
-  background-color: #009651; /* Matching original green button */
+  background-color: #810B38; /* Matching original green button */
   color: #ffffff;
   text-decoration: none;
   font-size: 0.85rem;
@@ -148,7 +148,7 @@ body {
 }
 
 .btn-quote:hover {
-  background-color: #007a41;
+  background-color: #810B38b5;
 }
 
 /* Responsive design for tablets and mobile */
@@ -252,7 +252,7 @@ body {
   top: 4px;
   width: 8px;
   height: 2px;
-  background-color: #009651; /* Premium green indicator */
+  background-color: #810B38; /* Premium green indicator */
   transition: transform 0.25s ease;
 }
 
@@ -370,7 +370,7 @@ body {
 /* CTA Green Button Formatting */
 .btn-quote {
   display: inline-block;
-  background-color: #009651; /* Premium signature green */
+  background-color: #810B38; /* Premium signature green */
   color: #ffffff;
   text-decoration: none;
   font-size: 0.85rem;
@@ -381,7 +381,7 @@ body {
 }
 
 .btn-quote:hover {
-  background-color: #007a41;
+  background-color: #810B38b5;
 }
 
 /* Responsive design styles */

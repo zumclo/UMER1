@@ -227,7 +227,7 @@
 /* --- Brand Call To Action Button --- */
 .btn-quote {
   display: inline-block;
-  background-color: #009651; /* Corporate emerald identity green */
+  background-color: #810B38; /* Corporate emerald identity green */
   color: #ffffff;
   text-decoration: none;
   font-size: 0.85rem;
@@ -238,7 +238,7 @@
 }
 
 .btn-quote:hover {
-  background-color: #007a41;
+  background-color: #810B38b5;
 }   
 
 .quote-btn:active {

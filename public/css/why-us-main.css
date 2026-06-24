@@ -72,7 +72,7 @@ body {
 .green-divider {
     width: 50px;
     height: 2px;
-    background-color: #2cb572;
+    background-color: #810B38;
     margin: 15px 0 20px 0;
 }
 
@@ -87,7 +87,7 @@ body {
 /* Button Styling */
 .card-btn {
     display: inline-block;
-    background-color: #009649; /* Matching the green brand color */
+    background-color: #810B38; /* Matching the green brand color */
     color: #ffffff;
     text-decoration: none;
     padding: 12px 35px;
@@ -98,7 +98,7 @@ body {
 }
 
 .card-btn:hover {
-    background-color: #007d3c;
+    background-color: #810B38b5;
 }
 
 /* Responsive adjustments for smaller tablets/phones */
@@ -153,7 +153,7 @@ body {
     width: 36px;
     height: 36px;
     background-color: #ffffff;
-    border: 2px solid #2cb572; /* Emerald Green matching original image */
+    border: 2px solid #810B38; /* Emerald Green matching original image */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -268,7 +268,7 @@ body {
 
 /* Table Headers */
 .comparison-table thead tr {
-    background-color: #10a353; /* Exactly matches the vibrant brand green */
+    background-color: #810B38; /* Exactly matches the vibrant brand green */
 }
 
 .comparison-table th {
